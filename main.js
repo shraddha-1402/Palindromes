@@ -92,3 +92,19 @@ function setDelay(event) {
 }
 
 form.addEventListener("submit", setDelay);
+
+
+const buttonFlip = document.querySelector("#flip_card_front");
+const buttonFlipBack = document.querySelector("#flip_card_back");
+const card = document.querySelector("#card");
+
+function flip() {
+  card.style.transform = "rotateY(180deg)";
+}
+
+function flipBack() {
+  card.style.transform = "";
+}
+
+buttonFlip.addEventListener("click", flip);
+buttonFlipBack.addEventListener("click", flipBack);

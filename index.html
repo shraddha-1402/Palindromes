@@ -5,17 +5,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Palindromess</title>
 </head>
 
 <body>
-  <form id="form">
-    <label for="bday-adte">Enter Your Birthday Date</label>
-    <input type="date" name="bday-date" id="bday-date" required>
-    <button type="submit">Check</button>
-  </form>
-  <img src="./Timer.gif" alt="loading" id="loader" class="loader">
-  <div id="output" class="output"></div>
+  <nav class="navigation">
+    <h1>Palindrome World</h1>
+  </nav>
+  <div class="card" id="card">
+    <div class="card-back" id="card_back">
+      <span class="fa fa-arrow-left icon-back" id="flip_card_back"></span>
+      <h3 class="sub-heading">
+        A palindrome is a word/number which reads the same backward as forward
+      </h3>
+      <p>This app checks your birthdate in 4 formats yyyy-mm-dd, dd-mm-yyyy, mm-dd-yy, m-dd-yyyy
+        e.g. if your birthdate is 01 Aug 1995, then app will check for 19950801, 01081995, 080195, 1081995</p>
+      <form id="form">
+        <label for="bday-adte">Enter Your Birthday Date</label>
+        <input type="date" name="bday-date" id="bday-date" required>
+        <button type="submit">Check</button>
+      </form>
+      <img src="./Timer.gif" alt="loading" id="loader" class="loader">
+      <div id="output" class="output"></div>
+    </div>
+
+    <div class="card-front" id="card_front">
+      <h2 class="sub-heading">Check out if your Birthdate is Palidrome!</h2>
+      <div class="hero-img-container">
+        <img src="./images/pali.png" alt="palindrome" class="hero-img" />
+      </div>
+      <button class="button" id="flip_card_front">Let's Go!</button>
+    </div>
+  </div>
   <script src="./main.js"></script>
 </body>
 
