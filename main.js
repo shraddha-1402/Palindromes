@@ -45,12 +45,13 @@ function findNextPalindrome(date, days) {
   date = new Date(Date.parse(date) + 86400000);
   date = date.toString().split(" ");
   date = `${date[3]}-${months[date[1]]}-${date[2]}`;
+  let originalFormat = date;
 
   let palindromeDate = dateTypes(date);
   if (palindromeDate !== "") {
     return {
       days,
-      dateType: palindromeDate
+      date: originalFormat
     };
   }
   return findNextPalindrome(date, days);
@@ -80,7 +81,7 @@ function checkIfPalindrome() {
   if (palindromeDate === "")
     nextPalindromeObj = findNextPalindrome(inputDate.value, days);
 
-  output.innerText = palindromeDate === "" ? "Awww.. unfortunately your birthday date is not a palindrome:( Next palindrome date would be " + nextPalindromeObj.dateType + "that is after " + nextPalindromeObj.days + " days" : "Woohooo! Your birthday date is a palindrome in this format " + palindromeDate;
+  output.innerText = palindromeDate === "" ? "Awww.. unfortunately your birthday date is not a palindrome ☹️ Next palindrome date would be " + nextPalindromeObj.date + " that is after " + nextPalindromeObj.days + " days" : "Woohooo! Your birthday date is a palindrome in this format " + palindromeDate + " 🤩🤩";
 }
 
 function setDelay(event) {

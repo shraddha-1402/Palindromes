@@ -10,32 +10,41 @@
 </head>
 
 <body>
-  <nav class="navigation">
-    <h1>Palindrome World</h1>
-  </nav>
+  <h1 class="heading">Palindrome World</h1>
   <div class="card" id="card">
     <div class="card-back" id="card_back">
-      <span class="fa fa-arrow-left icon-back" id="flip_card_back"></span>
+      <span class="fa fa-arrow-left icon-back" id="flip_card_back"> &nbspBack</span>
       <h3 class="sub-heading">
-        A palindrome is a word/number which reads the same backward as forward
+        Enter your birthdate and we will tell you if your birthdate is a palindrome
       </h3>
-      <p>This app checks your birthdate in 4 formats yyyy-mm-dd, dd-mm-yyyy, mm-dd-yy, m-dd-yyyy
-        e.g. if your birthdate is 01 Aug 1995, then app will check for 19950801, 01081995, 080195, 1081995</p>
-      <form id="form">
-        <label for="bday-adte">Enter Your Birthday Date</label>
-        <input type="date" name="bday-date" id="bday-date" required>
-        <button type="submit">Check</button>
+      <p class="description">This app checks your birthdate in 5 formats <strong>
+          yyyy-mm-dd, dd-mm-yyyy, dd-mm-yy, mm-dd-yy, m-dd-yyyy
+        </strong>
+        e.g. if your birthdate is 01 Aug 1995, then app will check for 19950801, 01081995, 010895, 080195, 1081995</p>
+      <form id="form" class="form display-flex-coloumn">
+        <input class="input" type="date" name="bday-date" id="bday-date" required>
+        <button class="submit-button" type="submit">Check</button>
       </form>
-      <img src="./Timer.gif" alt="loading" id="loader" class="loader">
+      <img src="./images/Timer.gif" alt="loading" id="loader" class="loader">
       <div id="output" class="output"></div>
+      <footer class="footer">
+        <a href="https://github.com/shraddha-1402" target="_blank" rel="noreferrer noopner"
+          class="fa fa-github icon-sm">
+        </a>
+        <a href="https://twitter.com/ShraddhaGupta08" target="_blank" rel="noreferrer noopner"
+          class="fa fa-twitter icon-sm"></a>
+        <a href="https://www.linkedin.com/in/shraddha-1402/" target="_blank" rel="noreferrer noopner"
+          class="fa fa-linkedin icon-sm"></a>
+      </footer>
     </div>
 
     <div class="card-front" id="card_front">
       <h2 class="sub-heading">Check out if your Birthdate is Palidrome!</h2>
       <div class="hero-img-container">
         <img src="./images/pali.png" alt="palindrome" class="hero-img" />
+        <p class="hero-description">A palindrome is a word/number which reads the same backward as forward</p>
       </div>
-      <button class="button" id="flip_card_front">Let's Go!</button>
+      <button class="submit-button" id="flip_card_front">Let's Go!</button>
     </div>
   </div>
   <script src="./main.js"></script>
